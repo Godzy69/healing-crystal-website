@@ -2,13 +2,13 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #fff;
   line-height: 1.6;
 }
 
 header {
-  background: url('header-bg.jpg') no-repeat center center/cover;
+  background: url('Image/header-bg.jpg') no-repeat center center/cover;
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -41,13 +41,13 @@ header p {
 }
 
 .crystal-item {
-  background: white;
-  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
   width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -71,8 +71,7 @@ header p {
 }
 
 .contact {
-  background-color: #6c5b7b;
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 40px 20px;
   text-align: center;
 }
@@ -96,9 +95,15 @@ form input, form textarea {
   width: 80%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   font-size: 1rem;
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 form button {
@@ -117,7 +122,7 @@ form button:hover {
 }
 
 footer {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   text-align: center;
   padding: 15px;
