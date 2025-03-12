@@ -1,4 +1,4 @@
-// Cart functionality
+// Initialize cart and total from localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let total = parseFloat(localStorage.getItem('total')) || 0;
 
