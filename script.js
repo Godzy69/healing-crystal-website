@@ -43,8 +43,8 @@ document.getElementById('checkout').addEventListener('click', () => {
 document.getElementById('contact-form').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  // Add cart data to hidden input
-  const cartData = JSON.stringify(cart);
+  // Format cart data as a simple text list
+  const cartData = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('\n');
   document.getElementById('cart-data').value = cartData;
 
   // Submit the form
