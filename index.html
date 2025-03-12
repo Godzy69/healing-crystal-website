@@ -22,35 +22,48 @@
         <h3>Amethyst</h3>
         <p>Known for its calming energy and stress relief.</p>
         <p><strong>Price:</strong> $20</p>
+        <button class="add-to-cart" data-name="Amethyst" data-price="20">Add to Cart</button>
       </div>
       <div class="crystal-item">
         <img src="Image/rose-quartz.jpg" alt="Rose Quartz">
         <h3>Rose Quartz</h3>
         <p>The stone of love and emotional healing.</p>
         <p><strong>Price:</strong> $15</p>
+        <button class="add-to-cart" data-name="Rose Quartz" data-price="15">Add to Cart</button>
       </div>
       <div class="crystal-item">
         <img src="Image/clear-quartz.jpg" alt="Clear Quartz">
         <h3>Clear Quartz</h3>
         <p>Amplifies energy and clarity.</p>
         <p><strong>Price:</strong> $25</p>
+        <button class="add-to-cart" data-name="Clear Quartz" data-price="25">Add to Cart</button>
       </div>
     </div>
   </section>
 
+  <section class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button id="checkout">Proceed to Checkout</button>
+  </section>
+
   <section class="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
+    <h2>Checkout</h2>
+    <form id="contact-form" action="https://formspree.io/f/xldjevrp" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message (Optional):</label>
+      <textarea id="message" name="message" rows="5"></textarea>
 
-      <button type="submit">Send Message</button>
+      <!-- Hidden input to store cart items -->
+      <input type="hidden" id="cart-data" name="cart-data">
+
+      <button type="submit">Place Order</button>
     </form>
   </section>
 
