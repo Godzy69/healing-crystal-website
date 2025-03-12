@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Healing Crystal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Checkout</h1>
+      <p>Complete your purchase</p>
+    </div>
+  </header>
+
+  <section class="checkout">
+    <h2>Your Order</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+
+    <h2>Payment Details</h2>
+    <div id="paypal-button-container"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Healing Crystal. All rights reserved.</p>
+  </footer>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AZwIJC0d56UqttrwsrxXU0vaAAVj7vqTv2G_vTFFoHa0vc9D0axzEEepWLFk7uiaYMc7jsBxak_999BX&currency=USD"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>
