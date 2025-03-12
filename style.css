@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: #1a1a1a; /* Dark background */
+  background: linear-gradient(135deg, #1a1a1a, #000000); /* Dark gradient background */
   color: #e0e0e0; /* Light text for contrast */
   line-height: 1.6;
 }
@@ -18,12 +18,14 @@ header h1 {
   font-size: 3rem;
   margin: 0;
   color: #ff6f61; /* Vibrant accent color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text stroke effect */
 }
 
 header p {
   font-size: 1.2rem;
   margin: 10px 0 0;
   color: #e0e0e0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text stroke effect */
 }
 
 .crystals {
@@ -35,6 +37,7 @@ header p {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #ff6f61; /* Vibrant accent color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text stroke effect */
 }
 
 .crystal-list {
@@ -68,6 +71,7 @@ header p {
   font-size: 1.5rem;
   margin: 15px 0 10px;
   color: #ff6f61; /* Vibrant accent color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text stroke effect */
 }
 
 .crystal-item p {
@@ -91,6 +95,7 @@ header p {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #ff6f61; /* Vibrant accent color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text stroke effect */
 }
 
 form {
