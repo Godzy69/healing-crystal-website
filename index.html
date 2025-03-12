@@ -45,26 +45,7 @@
     <h2>Your Cart</h2>
     <ul id="cart-items"></ul>
     <p>Total: $<span id="cart-total">0</span></p>
-    <button id="checkout">Proceed to Checkout</button>
-  </section>
-
-  <section class="contact">
-    <h2>Checkout</h2>
-    <form id="contact-form" action="https://formspree.io/f/xldjevrp" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message (Optional):</label>
-      <textarea id="message" name="message" rows="5"></textarea>
-
-      <!-- Hidden input to store cart items -->
-      <input type="hidden" id="cart-data" name="cart-data">
-
-      <button type="submit">Place Order</button>
-    </form>
+    <a href="checkout.html" id="checkout">Proceed to Checkout</a>
   </section>
 
   <footer>
