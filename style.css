@@ -2,8 +2,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f4f4f9, #e0e0f5); /* Soft gradient background */
-  color: #333;
+  background: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text for contrast */
   line-height: 1.6;
 }
 
@@ -17,11 +17,13 @@ header {
 header h1 {
   font-size: 3rem;
   margin: 0;
+  color: #ff6f61; /* Vibrant accent color */
 }
 
 header p {
   font-size: 1.2rem;
   margin: 10px 0 0;
+  color: #e0e0e0;
 }
 
 .crystals {
@@ -32,7 +34,7 @@ header p {
 .crystals h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #6c5b7b; /* Matching the theme color */
+  color: #ff6f61; /* Vibrant accent color */
 }
 
 .crystal-list {
@@ -42,19 +44,19 @@ header p {
 }
 
 .crystal-item {
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  border: 1px solid #ddd;
+  background: #2a2a2a; /* Dark background for items */
+  border: 1px solid #444;
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
   width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
-  backdrop-filter: blur(5px); /* Adds a blur effect for a modern look */
 }
 
 .crystal-item:hover {
   transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .crystal-item img {
@@ -65,17 +67,21 @@ header p {
 .crystal-item h3 {
   font-size: 1.5rem;
   margin: 15px 0 10px;
-  color: #6c5b7b; /* Matching the theme color */
+  color: #ff6f61; /* Vibrant accent color */
 }
 
 .crystal-item p {
   font-size: 1rem;
   margin: 5px 0;
-  color: #555;
+  color: #e0e0e0;
+}
+
+.crystal-item strong {
+  color: #ff6f61; /* Vibrant accent color for price */
 }
 
 .contact {
-  background-color: #6c5b7b;
+  background-color: #2a2a2a; /* Dark background for contact section */
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -84,6 +90,7 @@ header p {
 .contact h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #ff6f61; /* Vibrant accent color */
 }
 
 form {
@@ -94,15 +101,18 @@ form {
 
 form label {
   margin: 10px 0 5px;
+  color: #e0e0e0;
 }
 
 form input, form textarea {
   width: 80%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #444;
   border-radius: 5px;
   font-size: 1rem;
+  background: #1a1a1a; /* Dark input fields */
+  color: #e0e0e0;
 }
 
 form button {
@@ -121,8 +131,8 @@ form button:hover {
 }
 
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   text-align: center;
   padding: 15px;
   position: relative;
