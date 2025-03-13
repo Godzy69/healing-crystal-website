@@ -11,9 +11,17 @@ function updateCart() {
   cartItems.innerHTML = '';
 
   // Add new items
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     const li = document.createElement('li');
     li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    
+    // Add a remove button for each item
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.classList.add('remove-item');
+    removeButton.addEventListener('click', () => removeItem(index));
+
+    li.appendChild(removeButton);
     cartItems.appendChild(li);
   });
 
@@ -23,6 +31,13 @@ function updateCart() {
   // Save cart data to localStorage
   localStorage.setItem('cart', JSON.stringify(cart));
   localStorage.setItem('total', total);
+}
+
+// Function to remove an item from the cart
+function removeItem(index) {
+  const removedItem = cart.splice(index, 1)[0];
+  total -= removedItem.price;
+  updateCart();
 }
 
 // Add to cart button functionality
