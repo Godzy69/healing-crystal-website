@@ -5,57 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healing Crystal</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for the cart icon -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="header-content">
-      <h1>Welcome to Healing Crystal</h1>
-      <p>Discover the beauty and energy of natural crystals</p>
+    <div class="header-top">
+      <div class="logo">
+        <h1>Healing Crystal</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for crystals...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="user-actions">
+        <a href="#"><i class="fas fa-user"></i> Account</a>
+        <div class="cart-icon" id="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </div>
+      </div>
     </div>
-    <!-- Cart Icon and Dropdown -->
-    <div class="cart-icon" id="cart-icon">
-      <i class="fas fa-shopping-cart"></i>
-      <span id="cart-count">0</span>
-    </div>
-    <div class="cart-dropdown" id="cart-dropdown">
-      <h3>Your Cart</h3>
-      <ul id="cart-items"></ul>
-      <p>Total: $<span id="cart-total">0</span></p>
-      <a href="checkout.html" id="checkout">Proceed to Checkout</a>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="crystals">
-    <h2>Our Crystals</h2>
-    <div class="crystal-list">
-      <div class="crystal-item">
-        <img src="Image/amethyst.jpg" alt="Amethyst">
-        <h3>Amethyst</h3>
-        <p>Known for its calming energy and stress relief.</p>
-        <p><strong>Price:</strong> $20</p>
-        <button class="add-to-cart" data-name="Amethyst" data-price="20">Add to Cart</button>
+  <!-- Cart Dropdown -->
+  <div class="cart-dropdown" id="cart-dropdown">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <a href="checkout.html" id="checkout">Proceed to Checkout</a>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="crystals">
+      <h2>Our Crystals</h2>
+      <div class="crystal-list">
+        <div class="crystal-item">
+          <img src="Image/amethyst.jpg" alt="Amethyst">
+          <h3>Amethyst</h3>
+          <p>Known for its calming energy and stress relief.</p>
+          <p><strong>Price:</strong> $20</p>
+          <button class="add-to-cart" data-name="Amethyst" data-price="20">Add to Cart</button>
+        </div>
+        <div class="crystal-item">
+          <img src="Image/rose-quartz.jpg" alt="Rose Quartz">
+          <h3>Rose Quartz</h3>
+          <p>The stone of love and emotional healing.</p>
+          <p><strong>Price:</strong> $15</p>
+          <button class="add-to-cart" data-name="Rose Quartz" data-price="15">Add to Cart</button>
+        </div>
+        <div class="crystal-item">
+          <img src="Image/clear-quartz.jpg" alt="Clear Quartz">
+          <h3>Clear Quartz</h3>
+          <p>Amplifies energy and clarity.</p>
+          <p><strong>Price:</strong> $25</p>
+          <button class="add-to-cart" data-name="Clear Quartz" data-price="25">Add to Cart</button>
+        </div>
       </div>
-      <div class="crystal-item">
-        <img src="Image/rose-quartz.jpg" alt="Rose Quartz">
-        <h3>Rose Quartz</h3>
-        <p>The stone of love and emotional healing.</p>
-        <p><strong>Price:</strong> $15</p>
-        <button class="add-to-cart" data-name="Rose Quartz" data-price="15">Add to Cart</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>Discover the beauty and energy of natural crystals.</p>
       </div>
-      <div class="crystal-item">
-        <img src="Image/clear-quartz.jpg" alt="Clear Quartz">
-        <h3>Clear Quartz</h3>
-        <p>Amplifies energy and clarity.</p>
-        <p><strong>Price:</strong> $25</p>
-        <button class="add-to-cart" data-name="Clear Quartz" data-price="25">Add to Cart</button>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: info@healingcrystal.com</p>
+        <p>Phone: +1 234 567 890</p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 Healing Crystal. All rights reserved.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Healing Crystal. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
