@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-  background: #232f3e;
+  background: #232f3e; /* Dark blue */
   color: white;
   padding: 10px 20px;
   position: sticky;
@@ -43,7 +43,7 @@ header {
 .search-bar button {
   padding: 8px 12px;
   border: none;
-  background: #ff6f61;
+  background: #ff6f61; /* Orange */
   color: white;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
@@ -70,7 +70,7 @@ header {
 }
 
 #cart-count {
-  background: #ff6f61;
+  background: #ff6f61; /* Orange */
   color: white;
   border-radius: 50%;
   padding: 2px 6px;
@@ -98,14 +98,14 @@ nav ul li a {
   position: fixed;
   top: 80px;
   right: 20px;
-  background: white;
+  background: rgba(255, 255, 255, 0.95); /* White with slight transparency */
   padding: 15px;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: none; /* Hidden by default */
-  color: #333;
+  color: #333; /* Dark gray */
 }
 
 .cart-dropdown h3 {
@@ -117,6 +117,8 @@ nav ul li a {
   list-style: none;
   padding: 0;
   margin: 0;
+  max-height: 200px; /* Limit height for scrollable list */
+  overflow-y: auto; /* Add scroll if too many items */
 }
 
 #cart-items li {
@@ -128,7 +130,7 @@ nav ul li a {
 }
 
 .remove-item {
-  background-color: #ff4a3d;
+  background-color: #ff4a3d; /* Darker orange */
   color: white;
   border: none;
   padding: 5px 10px;
@@ -138,11 +140,11 @@ nav ul li a {
 }
 
 .remove-item:hover {
-  background-color: #ff1a1a;
+  background-color: #ff1a1a; /* Red */
 }
 
 #checkout {
-  background-color: #ff6f61;
+  background-color: #ff6f61; /* Orange */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -158,7 +160,7 @@ nav ul li a {
 }
 
 #checkout:hover {
-  background-color: #ff4a3d;
+  background-color: #ff4a3d; /* Darker orange */
 }
 
 /* Main Content */
@@ -205,7 +207,7 @@ main {
 }
 
 .crystal-item button {
-  background-color: #ff6f61;
+  background-color: #ff6f61; /* Orange */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -216,12 +218,12 @@ main {
 }
 
 .crystal-item button:hover {
-  background-color: #ff4a3d;
+  background-color: #ff4a3d; /* Darker orange */
 }
 
 /* Footer */
 footer {
-  background: #232f3e;
+  background: #232f3e; /* Dark blue */
   color: white;
   padding: 20px;
   text-align: center;
@@ -249,7 +251,7 @@ footer {
 }
 
 .footer-section ul li a {
-  color: white;
+  color: #cccccc; /* Light gray */
   text-decoration: none;
 }
 
