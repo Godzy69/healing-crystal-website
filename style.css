@@ -26,7 +26,7 @@ header p {
 }
 
 .crystals, .cart, .checkout {
-  padding: 40px 20px;
+  padding: 20px; /* Reduced padding */
   text-align: center;
 }
 
@@ -81,11 +81,13 @@ header p {
   background-color: #ff4a3d;
 }
 
-.cart, .checkout {
+/* Smaller Cart Box */
+.cart {
   background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  margin: 20px;
+  padding: 15px; /* Reduced padding */
+  margin: 20px auto; /* Center the cart box */
   border-radius: 10px;
+  width: 300px; /* Set a fixed width */
 }
 
 #cart-items, #checkout-items {
