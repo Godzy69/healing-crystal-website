@@ -25,8 +25,8 @@ header p {
   margin: 10px 0 0;
 }
 
-.crystals, .cart, .checkout {
-  padding: 20px; /* Reduced padding */
+.crystals {
+  padding: 20px;
   text-align: center;
 }
 
@@ -81,25 +81,30 @@ header p {
   background-color: #ff4a3d;
 }
 
-/* Smaller Cart Box */
+/* Cart Bubble in Top-Right Corner */
 .cart {
+  position: fixed; /* Fixed position */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
   background: rgba(255, 255, 255, 0.1);
-  padding: 15px; /* Reduced padding */
-  margin: 20px auto; /* Center the cart box */
+  padding: 15px;
   border-radius: 10px;
-  width: 300px; /* Set a fixed width */
+  width: 200px; /* Smaller width for the bubble */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure it stays on top */
 }
 
-#cart-items, #checkout-items {
+#cart-items {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-#cart-items li, #checkout-items li {
+#cart-items li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -128,6 +133,9 @@ header p {
   transition: background-color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  width: 100%; /* Full width for the button */
+  text-align: center;
+  margin-top: 10px;
 }
 
 #checkout:hover {
