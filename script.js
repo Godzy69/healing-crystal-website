@@ -20,7 +20,10 @@ function updateCart() {
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.classList.add('remove-item');
-    removeButton.addEventListener('click', () => removeItem(index));
+    removeButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent event from bubbling up
+      removeItem(index);
+    });
 
     li.appendChild(removeButton);
     cartItems.appendChild(li);
@@ -61,7 +64,8 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 const cartIcon = document.getElementById('cart-icon');
 const cartDropdown = document.getElementById('cart-dropdown');
 
-cartIcon.addEventListener('click', () => {
+cartIcon.addEventListener('click', (event) => {
+  event.stopPropagation(); // Prevent event from bubbling up
   cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
 });
 
