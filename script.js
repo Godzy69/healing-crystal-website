@@ -55,6 +55,24 @@ function updateCart() {
 function removeItem(index) {
   const removedItem = cart.splice(index, 1)[0];
   total -= removedItem.price;
+
+  // Update stock when an item is removed
+  const productButtons = document.querySelectorAll('.add-to-cart');
+  productButtons.forEach(button => {
+    if (button.getAttribute('data-name') === removedItem.name) {
+      const stockSpan = button.parentElement.querySelector('.stock');
+      let stock = parseInt(stockSpan.getAttribute('data-stock'));
+      stockSpan.setAttribute('data-stock', stock + 1);
+      stockSpan.textContent = stock + 1 === 0 ? 'Out of Stock' : `${stock + 1} left`;
+
+      // Re-enable button if stock is available
+      if (stock + 1 > 0) {
+        button.disabled = false;
+        button.textContent = 'Add to Cart';
+      }
+    }
+  });
+
   updateCart();
 }
 
@@ -63,13 +81,27 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
   button.addEventListener('click', () => {
     const name = button.getAttribute('data-name');
     const price = parseFloat(button.getAttribute('data-price'));
+    const stockSpan = button.parentElement.querySelector('.stock');
+    let stock = parseInt(stockSpan.getAttribute('data-stock'));
 
-    // Add item to cart
-    cart.push({ name, price });
-    total += price;
+    if (stock > 0) {
+      // Add item to cart
+      cart.push({ name, price });
+      total += price;
 
-    // Update the cart display
-    updateCart();
+      // Update stock
+      stockSpan.setAttribute('data-stock', stock - 1);
+      stockSpan.textContent = stock - 1 === 0 ? 'Out of Stock' : `${stock - 1} left`;
+
+      // Disable button if stock is 0
+      if (stock - 1 === 0) {
+        button.disabled = true;
+        button.textContent = 'Out of Stock';
+      }
+
+      // Update the cart display
+      updateCart();
+    }
   });
 });
 

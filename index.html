@@ -16,18 +16,12 @@
         <h1>Healing Crystal</h1>
       </div>
       <div class="user-actions">
-        <!-- Removed Account link -->
         <div class="cart-icon" id="cart-icon">
           <i class="fas fa-shopping-cart"></i>
           <span id="cart-count">0</span>
         </div>
       </div>
     </div>
-    <nav>
-      <ul>
-        <!-- Removed all navigation links -->
-      </ul>
-    </nav>
   </header>
 
   <!-- Cart Dropdown -->
@@ -48,21 +42,24 @@
           <h3>Amethyst</h3>
           <p>Known for its calming energy and stress relief.</p>
           <p><strong>Price:</strong> ₹1660</p>
-          <button class="add-to-cart" data-name="Amethyst" data-price="1660">Add to Cart</button>
+          <p><strong>Stock:</strong> <span class="stock" data-stock="5">5 left</span></p>
+          <button class="add-to-cart" data-name="Amethyst" data-price="1660" data-stock="5">Add to Cart</button>
         </div>
         <div class="crystal-item">
           <img src="Image/rose-quartz.jpg" alt="Rose Quartz">
           <h3>Rose Quartz</h3>
           <p>The stone of love and emotional healing.</p>
           <p><strong>Price:</strong> ₹1245</p>
-          <button class="add-to-cart" data-name="Rose Quartz" data-price="1245">Add to Cart</button>
+          <p><strong>Stock:</strong> <span class="stock" data-stock="0">Out of Stock</span></p>
+          <button class="add-to-cart" data-name="Rose Quartz" data-price="1245" data-stock="0" disabled>Out of Stock</button>
         </div>
         <div class="crystal-item">
           <img src="Image/clear-quartz.jpg" alt="Clear Quartz">
           <h3>Clear Quartz</h3>
           <p>Amplifies energy and clarity.</p>
           <p><strong>Price:</strong> ₹2075</p>
-          <button class="add-to-cart" data-name="Clear Quartz" data-price="2075">Add to Cart</button>
+          <p><strong>Stock:</strong> <span class="stock" data-stock="10">10 left</span></p>
+          <button class="add-to-cart" data-name="Clear Quartz" data-price="2075" data-stock="10">Add to Cart</button>
         </div>
       </div>
     </section>

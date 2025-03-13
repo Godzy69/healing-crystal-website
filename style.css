@@ -180,8 +180,23 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.crystal-item button:hover {
-  background-color: #ff4a3d; /* Darker orange */
+.crystal-item button:disabled {
+  background-color: #ccc; /* Gray for disabled button */
+  cursor: not-allowed;
+}
+
+.crystal-item button:disabled:hover {
+  background-color: #ccc; /* Gray for disabled button */
+}
+
+/* Stock Information */
+.stock {
+  font-weight: bold;
+  color: #333;
+}
+
+.stock[data-stock="0"] {
+  color: #ff4a3d; /* Red for out of stock */
 }
 
 /* Footer */
