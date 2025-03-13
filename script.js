@@ -7,27 +7,40 @@ function updateCart() {
   const cartItems = document.getElementById('cart-items');
   const cartTotal = document.getElementById('cart-total');
   const cartCount = document.getElementById('cart-count');
+  const checkoutButton = document.getElementById('checkout');
+  const emptyCartMessage = document.createElement('p');
 
   // Clear existing items
   cartItems.innerHTML = '';
 
-  // Add new items
-  cart.forEach((item, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-    
-    // Add a remove button for each item
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.classList.add('remove-item');
-    removeButton.addEventListener('click', (event) => {
-      event.stopPropagation(); // Prevent event from bubbling up
-      removeItem(index);
+  if (cart.length === 0) {
+    // Show empty cart message
+    emptyCartMessage.textContent = "You don't have anything added yet!";
+    emptyCartMessage.style.textAlign = 'center';
+    emptyCartMessage.style.color = '#666';
+    cartItems.appendChild(emptyCartMessage);
+
+    // Hide the "Proceed to Checkout" button
+    checkoutButton.style.display = 'none';
+  } else {
+    // Add new items
+    cart.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.textContent = `${item.name} - ₹${item.price.toFixed(2)}`;
+      
+      // Add a remove button for each item
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.classList.add('remove-item');
+      removeButton.addEventListener('click', () => removeItem(index));
+
+      li.appendChild(removeButton);
+      cartItems.appendChild(li);
     });
 
-    li.appendChild(removeButton);
-    cartItems.appendChild(li);
-  });
+    // Show the "Proceed to Checkout" button
+    checkoutButton.style.display = 'block';
+  }
 
   // Update total and cart count
   cartTotal.textContent = total.toFixed(2);
@@ -64,8 +77,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 const cartIcon = document.getElementById('cart-icon');
 const cartDropdown = document.getElementById('cart-dropdown');
 
-cartIcon.addEventListener('click', (event) => {
-  event.stopPropagation(); // Prevent event from bubbling up
+cartIcon.addEventListener('click', () => {
   cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
 });
 
