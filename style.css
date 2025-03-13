@@ -29,37 +29,6 @@ header {
   font-size: 1.8rem;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar input {
-  padding: 8px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-}
-
-.search-bar button {
-  padding: 8px 12px;
-  border: none;
-  background: #ff6f61; /* Orange */
-  color: white;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.user-actions a {
-  color: white;
-  text-decoration: none;
-}
-
 .cart-icon {
   position: relative;
   cursor: pointer;
@@ -78,19 +47,6 @@ header {
   position: absolute;
   top: -10px;
   right: -10px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
 }
 
 /* Cart Dropdown */
@@ -227,36 +183,4 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-section h4 {
-  margin-bottom: 10px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li a {
-  color: #cccccc; /* Light gray */
-  text-decoration: none;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  border-top: 1px solid #444;
-  padding-top: 10px;
 }
