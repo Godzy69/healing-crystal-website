@@ -55,11 +55,6 @@ header {
   gap: 20px;
 }
 
-.user-actions a {
-  color: white;
-  text-decoration: none;
-}
-
 .cart-icon {
   position: relative;
   cursor: pointer;
@@ -78,19 +73,6 @@ header {
   position: absolute;
   top: -10px;
   right: -10px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
 }
 
 /* Cart Dropdown */
@@ -243,16 +225,6 @@ footer {
 
 .footer-section h4 {
   margin-bottom: 10px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li a {
-  color: #cccccc; /* Light gray */
-  text-decoration: none;
 }
 
 .footer-bottom {
